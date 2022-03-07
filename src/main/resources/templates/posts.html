@@ -36,7 +36,7 @@
                     <span th:text="${post.author}"></span>
                     <span th:text="${post.createdAt}"></span>
                 </p>
-                <a href="#">
+                <a th:href="${(#mvc.url('CBC#getPostDetails').arg(0, post.id)).build()}">
                     <h4 class="card-title" style="font-weight: bold; color: black; padding-top: 5px;">
                         <span th:text="${post.title}"></span>
                     </h4>
